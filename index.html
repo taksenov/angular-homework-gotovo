@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html" ng-app="app"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="static/img/favicon.png" rel="shortcut icon">
+
+    <!-- все приколюхи для html файла дерни из папки с бойлерплейтом -->
+
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- для продакшена не забудь расскомментировать -->
+    <!-- build:css css/custom.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <!--<link rel="stylesheet" href="css/app-custom.css" />-->
+    <!-- endbuild -->
+
+    <!-- LESS на продакшене закомментировать -->
+    <link  href="less/main.less" rel="stylesheet/less" type="text/css">
+
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <!-- красивый бэкгроунд -->
+    <section class="main-section__background">
+        <div class="container">
+
+            <ng-view></ng-view>
+
+        </div>
+    </section>
+    <!-- красивый бэкгроунд -->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--<script src="bower_components/boilerplate/assets/js/main.js"></script>-->
+    <script src="bower_components/jqueryui/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/custom.js -->
+    <script src="js/tooltip.js"></script>
+    <!-- javaScript for myAngularApp -->
+    <script src="js/app.js"></script>
+    <script src="js/services/firebaseFactory.js"></script>
+    <script src="js/services/filesFactory.js"></script>
+
+    <script src="js/controllers/LinesIndexCtrl.js"></script>
+    <script src="js/controllers/EditContactCtrl.js"></script>
+    <script src="js/controllers/NewContactCtrl.js"></script>
+    <script src="js/controllers/FileUploadCtrl.js"></script>
+    <script src="js/controllers/MosaicCtrl.js"></script>
+
+
+    <script src="js/ui.js"></script>
+    <script src="js/oi.list.js"></script>
+    <script src="js/oi.file.js"></script>
+    <!--<script src="js/uploaderApp.js"></script>-->
+
+
+
+
+
+
+    <!-- endbuild -->
+
+    <!-- Не забудь подключить сюда less.js -->
+    <!-- а на продакшене закомментировать -->
+    <script src="bower_components/less/dist/less.js"></script>
+
+
+</body>
+</html>

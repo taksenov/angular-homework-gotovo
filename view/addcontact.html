@@ -1,0 +1,125 @@
+            <!-- заголовок -->
+            <div class="header text-center">
+                <span class="header__text">{{ title }}</span>
+            </div>
+            <!-- заголовок -->
+
+            <!-- кнопка назад -->
+            <div class="row margin-bottom_18px">
+                <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <a href="#/">
+                        <button class="btn btn-default btn-backward">
+                            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- кнопка назад -->
+
+            <!-- форма редактирования контакта -->
+            <div class="row" ng-controller="FileUploadCtrl">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+
+                    <div class="contact-edit-form">
+
+                        <!-- для правильной прозрачности флона -->
+                        <div class="contact-edit-form__transition"></div>
+
+                        <div class="row" id="ng-app">
+
+                            <!-- фото -->
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center" oi-file="uploadoptions" ui-sortable="{stop: sort}" ng-class="dropClass" ng-model="items">
+
+                                <div class="contact-image" >
+                                    <img ng-src="{{ objThumbLink }}" err-src="static/img/none.png" class="img-rounded" alt=""/>
+                                </div>
+
+
+                                <div class="add-image__region">
+                                    <a href="" ng-click="addNewUserpic()"><span class="glyphicon glyphicon-folder-open icon__edit" aria-hidden="true"></span></a>
+                                    <input type="file" id="file1" style="display:none" multiple="multiple" oi-file="uploadoptions" ng-model="new.userpic"/>
+
+                                    <a href="" ng-click="newContactSetNonePNGUserpic()"><span class="glyphicon glyphicon-unchecked icon__delete" aria-hidden="true"></span></a>
+                                </div>
+
+                                <div class="contact-buttons">
+                                    <button class="btn btn-default contact-button" ng-click="addContact(new); new=''">Сохранить</button>
+                                    <button class="btn btn-default contact-button" disabled="disabled">Удалить</button>
+                                </div>
+
+                            </div>
+                            <!-- фото -->
+
+                            <!-- форма с полями -->
+                            <div class="col-xs-10 col-sm-10 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+                                <form class="contact-attr">
+                                    <div class="form-group margin-bottom_10px">
+                                        <label for="contactName" class="contact-attr__label">Имя</label>
+                                        <input type="text" class="form-control contact-attr__input" id="contactName" name="contactName" placeholder="Имя контакта" ng-model="new.userName">
+                                    </div>
+                                    <div class="form-group margin-bottom_10px">
+                                        <label for="contactLastName" class="contact-attr__label">Фамилия</label>
+                                        <input type="text" class="form-control contact-attr__input" id="contactLastName" name="contactLastName" placeholder="Фамилия контакта" ng-model="new.userLastName">
+                                    </div>
+                                    <div class="form-group margin-bottom_10px">
+
+                                        <label class="contact-attr__label">Контактная информация</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="mailConvert">
+                                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="email" class="form-control contact-attr__input" name="contactEMail" placeholder="yourmail@gmail.com" aria-describedby="mailConvert" ng-model="new.email">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group margin-bottom_10px">
+
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="phoneHandset">
+                                                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control contact-attr__input" name="contactPhone" placeholder="+7 911 111 2233" aria-describedby="phoneHandset" ng-model="new.phone">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- форма с полями -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="error-area">
+                    <div class="alert alert-error" ng-show="errors.length">
+                        <button class="close" ng-click="errors.length=0">&times;</button>
+                        <span ng-repeat="error in errors | unique">{{error.msg}}<br/></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- форма редактирования контакта -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

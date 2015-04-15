@@ -1,0 +1,84 @@
+            <!-- заголовок -->
+            <div class="header text-center">
+                <span class="header__text">{{ title }}</span>
+            </div>
+            <!-- заголовок -->
+
+            <!-- кнопка добавить + кнопки переключения вида -->
+            <div class="row margin-bottom_18px">
+
+                <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-6 col-sm-offset-0 col-xs-6 col-xs-offset-0">
+                    <button class="btn btn-default add-button" ng-click="redirectToAddContact()">Добавить</button>
+                </div>
+
+                <div class="col-lg-1 col-lg-offset-8 col-md-2 col-md-offset-7 col-sm-6 col-sm-offset-0 col-xs-6 col-xs-offset-0">
+
+                    <div class="switch-routine text-right">
+
+                        <a href="#/mosaic">
+                            <div class="link__mosaic link__mosaic_active"></div>
+                        </a>
+
+                        <a href="#/">
+                            <div class="link__lines"></div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- кнопка добавить + кнопки переключения вида -->
+
+            <!-- форма со списком контактов -->
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+
+                    <div class="contact-edit-form">
+
+                        <!-- для правильной прозрачности фона -->
+                        <div class="contact-edit-form__transition"></div>
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-for-table">
+
+                                <ul class="mosaic__list">
+                                    <li class="list__item" ng-repeat="item in data">
+                                        <div class="mosaic__thumb">
+                                            <div class="mosaic__image">
+                                                <img ng-src="{{ item.userpic }}" alt="" class="img-rounded" width="130" height="130"/>
+                                                <div class="control__region">
+                                                    <a href="#/edit/{{item.$id}}"><span class="glyphicon glyphicon-wrench icon__edit" aria-hidden="true"></span></a>
+                                                    <a href="" ng-click="deleteContact(item)"><span class="glyphicon glyphicon-remove icon__delete" aria-hidden="true"></span></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="mosaic__text text-center">
+                                                <span>
+                                                    {{ item.userName }} {{ item.userLastName }}
+                                                </span>
+                                            </div>
+                                            <div class="mosaic__text text-center">
+                                                <span>
+                                                    {{ item.phone }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- форма со списком контактов -->

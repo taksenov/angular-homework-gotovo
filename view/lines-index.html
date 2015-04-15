@@ -1,0 +1,86 @@
+            <!-- заголовок -->
+            <div class="header text-center">
+                <span class="header__text">{{ title }}</span>
+            </div>
+            <!-- заголовок -->
+
+            <!-- кнопка добавить + кнопки переключения вида -->
+            <div class="row margin-bottom_18px">
+
+                <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-6 col-sm-offset-0 col-xs-6 col-xs-offset-0">
+                    <button class="btn btn-default add-button" ng-click="redirectToAddContact()">Добавить</button>
+                </div>
+
+                <div class="col-lg-1 col-lg-offset-8 col-md-2 col-md-offset-7 col-sm-6 col-sm-offset-0 col-xs-6 col-xs-offset-0">
+
+                    <div class="switch-routine text-right">
+
+                        <a href="#/mosaic">
+                            <div class="link__mosaic"></div>
+                        </a>
+
+                        <a href="#/">
+                            <div class="link__lines link__lines_active"></div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- кнопка добавить + кнопки переключения вида -->
+
+            <!-- форма со списком контактов -->
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+
+                    <div class="contact-edit-form">
+
+                        <!-- для правильной прозрачности фона -->
+                        <div class="contact-edit-form__transition"></div>
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-for-table table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="lines__th">#</th>
+                                            <th class="lines__th">Имя</th>
+                                            <th class="lines__th">Фамилия</th>
+                                            <th class="lines__th">Телефон</th>
+                                            <th class="lines__th">Email</th>
+                                            <th class="lines__th"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr ng-repeat="item in data">
+                                            <td class="lines__td">{{$index + 1}}</td>
+                                            <td class="lines__td">{{ item.userName }}</td>
+                                            <td class="lines__td">{{ item.userLastName }}</td>
+                                            <td class="lines__td">{{ item.phone }}</td>
+                                            <td class="lines__td">{{ item.email }}</td>
+                                            <td class="lines__td">
+                                                <a href="#/edit/{{item.$id}}">
+                                                    <span class="glyphicon glyphicon-wrench icon__edit text-right" aria-hidden="true"></span>
+                                                </a>
+                                                <a href="" ng-click="deleteContact(item)">
+                                                    <span class="glyphicon glyphicon-remove icon__delete text-right" aria-hidden="true"></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- форма со списком контактов -->

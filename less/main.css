@@ -1,0 +1,317 @@
+/* -------= MainSettings =------- */
+/* Fonts */
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../static/fonts/Roboto-Light.eot");
+  src: url("../static/fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-Light.woff") format("woff"), url("../static/fonts/Roboto-Light.ttf") format("truetype"), url("../static/fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../static/fonts/Roboto-Bold.eot");
+  src: url("../static/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-Bold.woff") format("woff"), url("../static/fonts/Roboto-Bold.ttf") format("truetype"), url("../static/fonts/Roboto-Bold.svg#Roboto-Bold") format("svg");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../static/fonts/Roboto-Regular.eot");
+  src: url("../static/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-Regular.woff") format("woff"), url("../static/fonts/Roboto-Regular.ttf") format("truetype"), url("../static/fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
+}
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("../static/fonts/Roboto-Black.eot");
+  src: url("../static/fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-Black.woff") format("woff"), url("../static/fonts/Roboto-Black.ttf") format("truetype"), url("../static/fonts/Roboto-Black.svg#Roboto-Black") format("svg");
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../static/fonts/Roboto-Thin.eot");
+  src: url("../static/fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-Thin.woff") format("woff"), url("../static/fonts/Roboto-Thin.ttf") format("truetype"), url("../static/fonts/Roboto-Thin.svg#Roboto-Thin") format("svg");
+}
+@font-face {
+  font-family: "Roboto-ThinItalic";
+  src: url("../static/fonts/Roboto-ThinItalic.eot");
+  src: url("../static/fonts/Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-ThinItalic.woff") format("woff"), url("../static/fonts/Roboto-ThinItalic.ttf") format("truetype"), url("../static/fonts/Roboto-ThinItalic.svg#Roboto-ThinItalic") format("svg");
+}
+@font-face {
+  font-family: "Roboto-MediumItalic";
+  src: url("../static/fonts/Roboto-MediumItalic.eot");
+  src: url("../static/fonts/Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../static/fonts/Roboto-MediumItalic.woff") format("woff"), url("../static/fonts/Roboto-MediumItalic.ttf") format("truetype"), url("../static/fonts/Roboto-MediumItalic.svg#Roboto-MediumItalic") format("svg");
+}
+/* ------------------------------------------- */
+.roboto-light {
+  font-family: "Roboto-Light";
+}
+.roboto-bold {
+  font-family: "Roboto-Bold";
+}
+.roboto-regular {
+  font-family: "Roboto-Regular";
+}
+.roboto-black {
+  font-family: "Roboto-Black";
+}
+.roboto-thin {
+  font-family: "Roboto-Thin";
+}
+.roboto-thinitalic {
+  font-family: "Roboto-ThinItalic";
+}
+.roboto-mediumitalic {
+  font-family: "Roboto-MediumItalic";
+}
+/* ------------------------------------------- */
+/* MIXINS */
+/* by https://bitbucket.org/wowua/ */
+.inlineblock {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+}
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding: 0;
+  left: 0;
+  list-style: none outside none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+/* -------= imports =------- */
+/* -------= imports =------- */
+/* -------= variables =------- */
+/* -------= variables =------- */
+.main-section__background {
+  background: url('../static/img/background.png') #dcd3d6 no-repeat center center /*fixed*/;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  min-height: 717px;
+  max-height: 3000px;
+}
+.header {
+  margin-top: 82px;
+  margin-bottom: 20px;
+}
+.header__text {
+  font-family: "Roboto-Regular";
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.btn-backward {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  padding: 3px;
+}
+.btn-backward:hover {
+  background-color: transparent;
+  border: 2px solid #838383;
+  color: #838383;
+  width: 26px;
+  height: 26px;
+}
+.margin-bottom_18px {
+  margin-bottom: 18px;
+}
+/* -------= imports =------- */
+/* -------= imports =------- */
+.contact-edit-form {
+  width: 100%;
+  min-height: 357px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent !important;
+  margin-bottom: 80px;
+}
+.contact-edit-form__transition {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.contact-image {
+  margin-top: 37px;
+  margin-bottom: 3px;
+}
+.contact-button {
+  width: 91px;
+  height: 30px;
+  margin-right: 7px;
+  margin-left: 7px;
+  padding: 0;
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+}
+.contact-attr {
+  margin-top: 34px;
+  margin-bottom: 37px;
+}
+.contact-attr__label {
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+}
+.contact-attr__input {
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+}
+.margin-bottom_10px {
+  margin-bottom: 10px;
+}
+.add-image__region {
+  overflow: hidden;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-bottom: 5px;
+}
+/* -------= imports =------- */
+/* -------= imports =------- */
+.link__lines {
+  margin-right: 12px;
+  float: right;
+  background: url('../static/img/sprites-line-mosaic.png') center center no-repeat;
+  background-position: -1px -1px;
+  width: 30px;
+  height: 23px;
+}
+.link__lines:hover {
+  background-position: -1.00000381px -52px;
+  width: 30px;
+  height: 23px;
+}
+.link__mosaic {
+  float: right;
+  background: url('../static/img/sprites-line-mosaic.png') center center no-repeat;
+  background-position: -51.00000381px -1px;
+  width: 25px;
+  height: 25px;
+}
+.link__mosaic:hover {
+  background-position: -51px -51px;
+  width: 25px;
+  height: 25px;
+}
+.switch-routine {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.switch-routine:before,
+.switch-routine:after {
+  content: "";
+  display: table;
+}
+.switch-routine:after {
+  clear: both;
+}
+.add-button {
+  width: 91px;
+  height: 30px;
+  padding: 0;
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+}
+.padding-for-table {
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.link__mosaic_active {
+  background-position: -51px -51px;
+  width: 25px;
+  height: 25px;
+}
+.link__lines_active {
+  background-position: -1.00000381px -52px;
+  width: 30px;
+  height: 23px;
+}
+.lines__th {
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+}
+.lines__td {
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+}
+/* -------= imports =------- */
+/* -------= imports =------- */
+.mosaic__thumb {
+  width: 130px;
+}
+.mosaic__image {
+  margin-bottom: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.mosaic__text {
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+}
+.mosaic__list {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.mosaic__list:before,
+.mosaic__list:after {
+  content: "";
+  display: table;
+}
+.mosaic__list:after {
+  clear: both;
+}
+.list__item {
+  float: left;
+  margin-right: 22px;
+  margin-bottom: 5px;
+  width: auto;
+}
+.icon__edit {
+  color: dimgray;
+}
+.icon__edit:hover {
+  color: green;
+  cursor: pointer;
+}
+.icon__delete {
+  color: dimgray;
+}
+.icon__delete:hover {
+  color: red;
+  cursor: pointer;
+}
+.control__region {
+  overflow: hidden;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 111px;
+  left: 90px;
+  border-radius: 6px 0 6px 0;
+}
+/* -------= MainSettings =------- */
